@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHa-Ww-avz">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-R.ttf">
+            <string>Ubuntu</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40V-3S-DPx">
+                                <rect key="frame" x="147" y="428" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.72549019609999998" green="0.62745098040000002" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4gY-sP-spH"/>
+                                    <constraint firstAttribute="height" constant="40" id="tKI-uZ-cIf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfg-Lb-adX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="40V-3S-DPx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0OG-ze-uOC"/>
+                            <constraint firstItem="40V-3S-DPx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cT6-JC-Ua2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BFp-Hn-Kh8"/>
+                    <connections>
+                        <outlet property="startButton" destination="40V-3S-DPx" id="YGU-T1-97Y"/>
+                        <segue destination="8bT-cM-rrE" kind="show" identifier="LaunchYoga" animates="NO" id="Dzo-tL-H6P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2708" y="48"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="RbH-jp-Mo5">
+            <objects>
+                <viewController id="l6C-0c-6Uv" customClass="SettingsViewController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ha8-Id-GfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-5h-fT8">
+                                <rect key="frame" x="0.0" y="138" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tabbar Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-wF-aDu">
+                                <rect key="frame" x="22.333333333333329" y="188" width="171.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.28627450980392155" blue="0.28235294117647058" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-WM-jnw">
+                                <rect key="frame" x="331" y="181.66666666666666" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="THH-sg-rvw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didChangeTabbarSwitch:" destination="l6C-0c-6Uv" eventType="valueChanged" id="rK6-eJ-Vna"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldK-yC-MdP">
+                                <rect key="frame" x="20" y="260" width="2.3333333333333321" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="ZDZ-xf-Sfh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should move back button with image?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-bH-FHq">
+                                <rect key="frame" x="22.333333333333343" y="256" width="274.66666666666663" height="18"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.28627450980392155" blue="0.27843137254901962" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-gF-Rjw">
+                                <rect key="frame" x="297" y="260" width="34" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="vJW-cd-zE6"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="81T-ZM-bhS">
+                                <rect key="frame" x="331" y="249.66666666666663" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didChangeBackButtonSwitch:" destination="l6C-0c-6Uv" eventType="valueChanged" id="9zh-zF-bL1"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fP5-F0-Tbz">
+                                <rect key="frame" x="380" y="260" width="34" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="lLx-9L-Te3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="m4U-WM-jnw" firstAttribute="leading" secondItem="81T-ZM-bhS" secondAttribute="leading" id="0uo-FQ-9zE"/>
+                            <constraint firstItem="fP5-F0-Tbz" firstAttribute="width" secondItem="ldK-yC-MdP" secondAttribute="width" multiplier="15" id="2jq-B1-vMO"/>
+                            <constraint firstItem="ldK-yC-MdP" firstAttribute="leading" secondItem="juZ-P0-rdm" secondAttribute="leading" constant="20" id="4V7-RW-rkS"/>
+                            <constraint firstItem="juZ-P0-rdm" firstAttribute="trailing" secondItem="fP5-F0-Tbz" secondAttribute="trailing" id="6Fp-fv-5dF"/>
+                            <constraint firstItem="6tl-wF-aDu" firstAttribute="top" secondItem="XpQ-5h-fT8" secondAttribute="bottom" constant="50" id="8wY-tr-OJa"/>
+                            <constraint firstItem="fP5-F0-Tbz" firstAttribute="centerY" secondItem="ldK-yC-MdP" secondAttribute="centerY" id="ANc-Uf-q37"/>
+                            <constraint firstItem="6Hw-bH-FHq" firstAttribute="leading" secondItem="ldK-yC-MdP" secondAttribute="trailing" id="DVf-cH-yC6"/>
+                            <constraint firstItem="81T-ZM-bhS" firstAttribute="trailing" secondItem="fP5-F0-Tbz" secondAttribute="leading" id="Dso-B9-8Pp"/>
+                            <constraint firstItem="XpQ-5h-fT8" firstAttribute="top" secondItem="juZ-P0-rdm" secondAttribute="top" constant="50" id="N8f-6M-TfJ"/>
+                            <constraint firstItem="6tl-wF-aDu" firstAttribute="leading" secondItem="6Hw-bH-FHq" secondAttribute="leading" id="OVz-tX-vEK"/>
+                            <constraint firstItem="6Hw-bH-FHq" firstAttribute="centerY" secondItem="81T-ZM-bhS" secondAttribute="centerY" id="SU8-sC-A1w"/>
+                            <constraint firstItem="81T-ZM-bhS" firstAttribute="leading" secondItem="GLE-gF-Rjw" secondAttribute="trailing" id="VFq-mz-uC2"/>
+                            <constraint firstItem="m4U-WM-jnw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6tl-wF-aDu" secondAttribute="trailing" constant="8" symbolic="YES" id="YXY-pw-w81"/>
+                            <constraint firstItem="6Hw-bH-FHq" firstAttribute="top" secondItem="6tl-wF-aDu" secondAttribute="bottom" constant="50" id="ZJP-3s-fLg"/>
+                            <constraint firstItem="XpQ-5h-fT8" firstAttribute="leading" secondItem="juZ-P0-rdm" secondAttribute="leading" id="ghz-Ka-2tL"/>
+                            <constraint firstItem="fP5-F0-Tbz" firstAttribute="width" secondItem="GLE-gF-Rjw" secondAttribute="width" id="hR2-Af-9oI"/>
+                            <constraint firstItem="GLE-gF-Rjw" firstAttribute="leading" secondItem="6Hw-bH-FHq" secondAttribute="trailing" id="nFB-UF-awh"/>
+                            <constraint firstItem="juZ-P0-rdm" firstAttribute="trailing" secondItem="XpQ-5h-fT8" secondAttribute="trailing" id="nKN-tV-6OF"/>
+                            <constraint firstItem="m4U-WM-jnw" firstAttribute="centerY" secondItem="6tl-wF-aDu" secondAttribute="centerY" id="pw1-z9-Kbq"/>
+                            <constraint firstItem="ldK-yC-MdP" firstAttribute="centerY" secondItem="6Hw-bH-FHq" secondAttribute="centerY" id="tzH-uC-AHu"/>
+                            <constraint firstItem="GLE-gF-Rjw" firstAttribute="centerY" secondItem="ldK-yC-MdP" secondAttribute="centerY" id="z3u-1S-AID"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="juZ-P0-rdm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" selectedImage="settings_selected" id="qfc-zw-Zgf"/>
+                    <connections>
+                        <outlet property="backbuttonSwitch" destination="81T-ZM-bhS" id="Esf-Pa-PJb"/>
+                        <outlet property="informationLabel" destination="XpQ-5h-fT8" id="URG-Mz-lZi"/>
+                        <outlet property="tabbarSwitch" destination="m4U-WM-jnw" id="agV-7L-nOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szg-Px-Dlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6605.7971014492759" y="440.625"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="u6z-4c-Mtp">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="0cc-Jm-LwR" customClass="ChatsViewController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYz-1z-g1B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-le-sCq">
+                                <rect key="frame" x="0.0" y="138" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S4B-le-sCq" firstAttribute="leading" secondItem="fFl-AY-4FH" secondAttribute="leading" id="8qk-wJ-I3l"/>
+                            <constraint firstItem="fFl-AY-4FH" firstAttribute="trailing" secondItem="S4B-le-sCq" secondAttribute="trailing" id="p2T-hx-I9u"/>
+                            <constraint firstItem="S4B-le-sCq" firstAttribute="top" secondItem="fFl-AY-4FH" secondAttribute="top" constant="50" id="sz5-3m-08J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fFl-AY-4FH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chats" image="chats" selectedImage="chats_selected" id="DlR-kL-qFh">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="informationLabel" destination="S4B-le-sCq" id="obE-Ny-vyV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R7o-h5-4G1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5736.8000000000002" y="441.22938530734638"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="Gz9-gY-DSH">
+            <objects>
+                <viewController id="Jvz-1a-siH" customClass="ArticlesViewController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="obh-fT-6pK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-lk-ilO">
+                                <rect key="frame" x="0.0" y="138" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kDB-lk-ilO" firstAttribute="leading" secondItem="5dJ-X7-cdy" secondAttribute="leading" id="1G8-MF-ZKx"/>
+                            <constraint firstItem="5dJ-X7-cdy" firstAttribute="trailing" secondItem="kDB-lk-ilO" secondAttribute="trailing" id="3op-8Y-T6N"/>
+                            <constraint firstItem="kDB-lk-ilO" firstAttribute="top" secondItem="5dJ-X7-cdy" secondAttribute="top" constant="50" id="liJ-dw-u9c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5dJ-X7-cdy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Articles" image="articles" selectedImage="articles_selected" id="jT1-ES-fDv"/>
+                    <connections>
+                        <outlet property="informationLabel" destination="kDB-lk-ilO" id="y6S-gr-dFW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rh8-ul-tTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6607.1999999999998" y="-206.44677661169416"/>
+        </scene>
+        <!--Yoga View Controller-->
+        <scene sceneID="Gv2-w5-GSL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mjq-xN-mgf" customClass="YogaViewController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Yr-d7-7kz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-ke-gHY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AcK-ke-gHY" firstAttribute="leading" secondItem="8Yr-d7-7kz" secondAttribute="leading" id="1l5-Pr-1jH"/>
+                            <constraint firstAttribute="bottom" secondItem="AcK-ke-gHY" secondAttribute="bottom" id="3XB-x4-HY8"/>
+                            <constraint firstItem="AcK-ke-gHY" firstAttribute="top" secondItem="8Yr-d7-7kz" secondAttribute="top" id="WyY-Co-9z6"/>
+                            <constraint firstAttribute="trailing" secondItem="AcK-ke-gHY" secondAttribute="trailing" id="j6G-M1-43U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Smi-Oz-FL7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rNh-39-0gE"/>
+                    <connections>
+                        <outlet property="tableView" destination="AcK-ke-gHY" id="xYr-os-hXB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2F2-8U-s9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5736.2318840579719" y="-206.91964285714286"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="5z4-ut-W4B">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="8bT-cM-rrE" customClass="TabbarController" customModule="YogaExplore" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ciA-Ni-6nh"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d1c-SS-D28" customClass="CustomTabbar" customModule="YogaExplore" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="customTabbar" destination="d1c-SS-D28" id="U3c-Az-H6P"/>
+                        <segue destination="8fl-ep-AJZ" kind="relationship" relationship="viewControllers" id="gJD-bf-GPo"/>
+                        <segue destination="0cc-Jm-LwR" kind="relationship" relationship="viewControllers" id="pvC-pj-Ph9"/>
+                        <segue destination="Jvz-1a-siH" kind="relationship" relationship="viewControllers" id="eHh-tB-GmZ"/>
+                        <segue destination="l6C-0c-6Uv" kind="relationship" relationship="viewControllers" id="2xu-ew-sJm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbt-rc-riM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3631" y="48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cAp-V8-Aoi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SHa-Ww-avz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DZP-5M-F6w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="F75-Oe-hmV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbz-6d-duY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="48"/>
+        </scene>
+        <!--Yoga-->
+        <scene sceneID="na1-3W-yJa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8fl-ep-AJZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Yoga" image="yoga" selectedImage="yoga_selected" id="v82-1R-oMM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KfD-su-PDo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mjq-xN-mgf" kind="relationship" relationship="rootViewController" id="Gov-fx-vkj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YaM-Jw-MXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4797.6000000000004" y="-206.44677661169416"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="articles" width="25" height="25"/>
+        <image name="articles_selected" width="25" height="25"/>
+        <image name="chats" width="25" height="25"/>
+        <image name="chats_selected" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="settings_selected" width="25" height="25"/>
+        <image name="yoga" width="25" height="25"/>
+        <image name="yoga_selected" width="25" height="25"/>
+    </resources>
+</document>
